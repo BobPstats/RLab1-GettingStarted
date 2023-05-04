@@ -1,0 +1,50 @@
+---
+title: "Intro to R Markdown"
+author: "PUT YOUR NAME HERE"
+output: html_document
+---
+
+```{r setup, include=FALSE, error=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error=TRUE)
+library(mosaic)
+```
+
+## Introduction
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. Text can be formatted using syntax *like this* for italics **or this** for bold text. When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. Do so now and look. Then return to this source file.
+
+There are two buttons, Source and Visual, right above this pane. Click on Visual to switch to the Visual mode for editing R Markdown documents, which simplifies document formatting.
+
+Use the toolbar to turn this sentence into an ordered list (icon has 1 2). Hit Enter at the start of this sentence to make second item, and then make the first two words bold.
+
+You can still type Markdown formatting code in the visual mode. Move the paragraph that starts with "There are two buttons" down a line (click before "There" and hit enter). Then in the new blank line above it, type "## Formatting in Markdown" to apply the Header 2 style to that text. Create another Header 2 below with the text "Code Chunks."
+
+The gray field below is called a **code chunk**. This is an R code chunk with a chunk label of "cars-mpg." You can run just this chunk here by clicking on the right-pointing triangle. You can clear output from a code chunk that you run in the editor using the x button. More often you should instead **Knit** the document (toolbar button) to see output embedded in the report document.
+
+```{r cars-mpg}
+summary(mtcars$mpg)
+```
+
+Plots can also be embedded.
+
+```{r mpg-plot}
+plot(mtcars$mpg)
+```
+
+Replace this sentence with "Rose Bowl" as a Header 2.
+
+Create a new R code chunk below using the green C button in the toolbar. Add the chunk-label "rose-summary" (no quotes). Then copy the commands indicated below from the Begin.R file into this new code chunk. You can leave some or all of the comments in (or none).
+
+* The two commands that read data from the csv and then created the **MOV** column.
+* The last four commands, beginning with install.packages
+
+
+
+## Produce and Download a PDF Report
+
+Your knitted document should be an HTML file (webpage) with summary statistics and a plot from the mtcars data set, two plots from the Rose Bowl data, and formatted text throughout. Once you have everything working, you are to produce a PDF document that you can submit to the Blackboard assignment. Follow these steps to do so.
+
+1.  First, in the document settings at the very top of this file, change author to be your name (inside the quotes).
+1.  Click on the downward-pointing triangle next to the Knit button and select PDF.
+1.  Download the PDF file to your computer so you can attach it to the BB submission. You can do so from either the PDF view that should have "popped out" or from the Files tab of the lower-right R-Studio pane.
+1.  (optional) Once you've figured out how to produce and download your PDF, you may wish to delete this whole last section and redo it since it's kind of superfluous text.
